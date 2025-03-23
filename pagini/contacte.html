@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacte</title>
+
+    <link rel="icon" href="../imagini/logo.jpg">
+
+    <meta name="keywords" content="prortofoliu, web developer, proiecte, website, website de prezentare, aplicatie" />
+    <meta name="description" content="Portofoliul meu, Ruxanda Cujbă" />
+    <meta name="author" content="Ruxanda Cujbă" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>
+    <script src="../js/formular.js" defer></script>
+</head>
+
+<body>
+    <!-- bara de navigare -->
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img class="logo" src="../imagini/logo.jpg">
+            </a>
+            <div class="linkuri">
+                <a href="../index.html">Acasă</a>
+                <a href="despre.html">Despre Mine</a>
+                <a href="premieri.html">Premieri</a>
+                <a class="acum" href="contacte.html">Contacte</a>
+            </div>
+            <a href="contacte.html">
+                <i class="fa-regular fa-comment-dots"></i>
+            </a>
+
+            <button id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+    
+            <div id="side-menu">
+                <a href="../index.html">Acasă</a>
+                <a href="despre.html">Despre Mine</a>
+                <a href="premieri.html">Premieri</a>
+                <a class="acum" href="contacte.html">Contacte</a>
+            </div>
+        </nav>
+
+        <!-- sectiunea de prezentare -->
+        <div class="hed">
+            <div class="text">
+                <h1>Contacte</h1>
+                <p>Ai întrebări sau vrei să plasezi o comandă personalizată? Nu ezita să îmi scrii sau să mă suni! Sunt
+                    mereu disponibil și gata să îți ofer toate informațiile de care ai nevoie și să te ajut să faci cea
+                    mai bună alegere. Aștept cu drag mesajul sau apelul tău!</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- date de contact -->
+    <section class="date">
+        <a href="tel:078904042">
+            <div class="data">
+                <div class="sus">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <p class="detail">+373 789 040 42</p>
+                </div>
+                <p>Sună-mă pentru orice întrebare sau detaliu. Sunt aici să te ajut!</p>
+            </div>
+        </a>
+        <a href="mailto:ruxanda.cujba07@gmail.com">
+            <div class="data">
+                <div class="sus">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <p class="detail">ruxanda.cujba07@gmail.com</p>
+                </div>
+                <p>Trimite-mi un e-mail și îți voi răspunde cât mai repede posibil!</p>
+            </div>
+        </a>
+        <a target="_blank" href="https://maps.app.goo.gl/hCpG56Md2WQ1o2k68">
+            <div class="data">
+                <div class="sus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="detail">r. Soroca, Moldova</p>
+                </div>
+                <p>Mă poți vizita la adresa de mai jos pentru orice informație suplimentară.</p>
+            </div>
+        </a>
+    </section>
+
+
+    <!-- trimmite mesaj -->
+    <section class="contactare">
+        <form action="https://formspree.io/f/xdkegynr" method="POST" class="contact-left">
+            <h2>Contactează-mă</h2>
+            <input type="text" name="Nume" placeholder="Nume" required>
+            <input type="number" name="Număr" placeholder="Număr" required>
+            <input type="email" name="E-mail" placeholder="E-mail" required>
+            <textarea name="Mesaj" placeholder="Mesaj" required></textarea>
+            <button class="button" type="submit">Trimite</button>
+        </form>
+        <div class="celula-poza"></div>
+    </section>
+
+
+    <!-- gasitine pe google maps -->
+    <section class="maps">
+        <h1>Găsiți-ne pe Google Maps</h1>
+        <iframe class="harta"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45831.89932054842!2d28.28487970863061!3d48.15368074049639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ccea71d9fefc6f%3A0xbc57b3e3e898706a!2sSoroca%2C%20Moldova!5e1!3m2!1sen!2s!4v1742733183276!5m2!1sen!2s"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Despre Mine</h3>
+                <p>Sunt o persoană curioasă și pasionată de tehnologie. În timpul liber, îmi place să învăț noi limbaje
+                    de programare și să explorez diferite domenii ale dezvoltării web.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Link-uri utile</h3>
+                <a href="../index.html">Acasă</a><br>
+                <a href="despre.html">Despre Mine</a><br>
+                <a href="premieri.html">Premieri</a><br>
+                <a href="despre.html#proiecte">Proiecte recente</a><br>
+                <a href="contacte.html">Contacte</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="tel:+373 789 040 42">Telefon: +373 789 040 42</a><br>
+                <a href="mailto:ruxanda.cujba07@gmail.com">Email: ruxanda.cujba07@gmail.com</a><br>
+                <a>Adresă: Soroca, SR, Moldova</p>
+                    <a href="https://maps.app.goo.gl/hCpG56Md2WQ1o2k68" target="_blank">Vezi pe hartă</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Urmărește-mă</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61574425295671&locale=ro_RO" target="_blank"><i
+                            class="fab fa-facebook">
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com/ruxxanda.01/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@ruxxanda.10" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@ruxandacujba2923" target="_blank"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="https://github.com/Ruxxanda" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span class="anul"></span> Ruxanda Cujbă. Acest website a fost realizat în
+                cadrul competiției ”Tekwill
+                Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare Școală” și nu reflectă neapărat opinia
+                proiectului.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
