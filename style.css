@@ -1,0 +1,1262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Kameron";
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "Kameron";
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    color: #d7c086;
+}
+
+h3 {
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 20px;
+}
+
+button {
+    background-color: #d7c086;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+img {
+    width: 70px;
+}
+
+
+header.index {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+header.index::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagini/imag.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* bara de navigare*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px 20px;
+    background-color: #d7c086;
+    margin: 0 10%;
+    width: 83%;
+    top: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 5000;
+}
+
+nav .logo {
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav .linkuri {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+nav .linkuri a {
+    font-family: 'Franklin Gothic Medium';
+}
+
+nav .linkuri a:hover,
+nav .linkuri a.acum {
+    color: #ffffff;
+}
+
+nav i {
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+nav #side-menu,
+nav #menu-btn i,
+nav #menu-btn {
+    display: none;
+}
+
+/* header-ul */
+header .hed {
+    margin: 0 10%;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .hed .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+}
+
+header .hed img {
+    width: 400px;
+    border-radius: 40px;
+}
+
+section {
+    margin: 0 10%;
+    margin-top: 100px;
+}
+
+/* mini proiecte recente */
+section.proiecte-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.proiecte-mini .pop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section.proiecte-mini .pop .proiect {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 10px;
+    border-radius: 20px;
+    height: 300px;
+    padding: 0 0 40px 30px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease-in-out;
+}
+
+section.proiecte-mini .pop .proiect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(3);
+    transition: filter 0.3s ease-in-out;
+    z-index: -1;
+}
+
+section.proiecte-mini .pop .proiect:hover::before {
+    filter: blur(5px);
+    z-index: 1;
+}
+
+section.proiecte-mini .pop .proiect .text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.proiecte-mini .pop .proiect .text h3 {
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    color: #000000;
+}
+
+section.proiecte-mini .pop .proiect:hover .text {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 2;
+}
+
+section.proiecte-mini .pop .proiect.x1 {
+    background-image: url('imagini/gustul\ de\ la\ tara.png');
+    background-size: cover;
+    background-position: center;
+}
+
+section.proiecte-mini .pop .proiect.x2 {
+    background-image: url('imagini/robovis.png');
+    background-size: cover;
+    background-position: center;
+}
+
+section.proiecte-mini .pop .proiect.x3 {
+    background-image: url('imagini/tatarauca\ veche.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* doua conteinere cu linkuri */
+/* section.link {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+section.link .rel {
+    background-color: #d7c086;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.link .rel .infor {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+section.link .rel .infor p {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+section.link .rel .infor h1 {
+    font-family: serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 40px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+section.link .rel .infor h1.text {
+    font-size: 25px;
+    width: 400px;
+    line-height: 25px;
+}
+
+section.link button {
+    background-color: #ffffff;
+    background-image: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+section.link .rel .infor button p {
+    font-size: 15px;
+    margin-top: -2px;
+    color: #000000;
+}
+
+section.link .rel .image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    margin-left: -50px;
+}
+
+section.link .rel .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+}
+
+section.link .rel:hover .image-container {
+    margin-left: -210px;
+} */
+
+
+/* footer */
+footer {
+    background-color: #d7c086;
+    color: #000;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    position: relative;
+}
+
+.footer-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.5s ease, left 0.3s ease;
+}
+
+.footer-section:hover h3::after {
+    width: 70%;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #000;
+}
+
+.footer-section p:hover,
+.footer-section ul li a:hover,
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffffd4;
+    color: #d7c086;
+    font-size: 1.2em;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #ffffff;
+    color: #d7c086;
+    transform: scale(1.1);
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+}
+
+
+
+
+
+/* DESPRE MINE */
+/* header-ul */
+header.noindex .hed {
+    margin: 0 10%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+header.noindex .hed .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+header.noindex .hed .imagini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+header.noindex .hed .imagini img {
+    width: 25%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+header.noindex .hed .imagini img.x2,
+header.noindex .hed .imagini img.x4 {
+    height: 170px;
+}
+
+
+
+/* proiecte recente */
+section.proiecte {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.proiecte .divcik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section.proiecte .divcik .pro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+section.proiecte .divcik .pro .img {
+    width: 50%;
+    height: 250px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px;
+}
+
+section.proiecte .divcik .pro .img button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+section.proiecte .divcik .pro .img:hover button {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+section.proiecte .divcik .pro .img.x1 {
+    background-image: url('imagini/gustul\ de\ la\ tara.png');
+    background-position: center;
+    background-size: cover;
+    align-items: end;
+}
+
+section.proiecte .divcik .pro .img.x2 {
+    background-image: url('imagini/robovis.png');
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+}
+
+section.proiecte .divcik .pro .img.x3 {
+    background-image: url('imagini/tatarauca\ veche.png');
+    background-position: center;
+    background-size: cover;
+    align-items: end;
+}
+
+section.proiecte .divcik .pro .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+section.proiecte .divcik .pro .info h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #d7c086;
+}
+
+section.proiecte .divcik .pro .info p {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+section.proiecte .divcik .pro .info span {
+    font-size: 20px;
+}
+
+
+section.proiecte .divcik .pro.x2 {
+    text-align: end;
+}
+
+section.proiecte .divcik .pro.x2 .info {
+    align-items: end;
+}
+
+
+/* premii si certificari */
+section.premii {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section.premii .divik {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+section.premii .divik .port {
+    width: 49%;
+    height: 250px;
+    background-color: #d7c086;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+section.premii .divik .port.x1 {
+    background-image: url('imagini/locul\ 1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+section.premii .divik .port.x2 {
+    background-image: url('imagini/locul\ 3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+section.premii .divik .port.x3 {
+    background-image: url('imagini/diplima\ designer.png');
+    background-position: center;
+    background-size: cover;
+}
+
+section.premii .divik .port.x4 {
+    background-image: url('imagini/diploma\ web.png');
+    background-position: center;
+    background-size: cover;
+}
+
+section.premii .divik .port .inform {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+section.premii .divik .port .inform h3 {
+    color: #000000;
+    font-size: 30px;
+}
+
+section.premii .divik .port.x1 .inform h3,
+section.premii .divik .port.x2 .inform h3 {
+    color: #ffffff;
+}
+
+section.premii .divik .port .inform button {
+    background-color: #ffffff;
+    background-image: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+section.premii .divik .port:hover .inform {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+/* abilitati */
+.abilitati {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+    background-color: #d7c086;
+    margin: 0;
+    margin-top: 100px;
+    padding: 10%;
+}
+
+.abilitati .text-top,
+.abilitati .text-bottom {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 40px;
+    color: #ffffffbd;
+    will-change: transform;
+}
+
+.abilitati .text-top {
+    top: 0;
+}
+
+.abilitati .text-bottom {
+    bottom: 0;
+}
+
+.abilitati .continut h2 {
+    color: #ffffff;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.abilitati .continut .abili {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.abilitati .continut .abili .divi {
+    width: 49%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.abilitati .continut .abili .divi .linie {
+    height: 4px;
+    width: 10px;
+    background-color: #000;
+    transition: width 0.5s ease;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.abilitati .continut .abili .divi:hover .linie {
+    width: 100%;
+}
+
+
+/* Vrei un site? */
+section.creare {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section.creare .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+section.creare img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+
+/* PREMIERI */
+body.premieri section.proiecte {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.premieri section.proiecte .divcik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+body.premieri section.proiecte .divcik .pro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+body.premieri section.proiecte .divcik .pro img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+
+body.premieri section.proiecte .divcik .pro .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+body.premieri section.proiecte .divcik .pro .info h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #d7c086;
+}
+
+body.premieri section.proiecte .divcik .pro .info p {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+body.premieri section.proiecte .divcik .pro .info span {
+    font-size: 20px;
+}
+
+
+body.premieri section.proiecte .divcik .pro.x2 {
+    text-align: end;
+}
+
+body.premieri section.proiecte .divcik .pro.x2 .info {
+    align-items: end;
+}
+
+
+
+/* CONTACTE */
+
+/* date de contact */
+section.date {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+section.date .data {
+    width: 100%;
+    background-color: #d7c086;
+    padding: 15px;
+    height: 170px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+section.date .data:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+section.date .data .sus {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+section.date .data .sus i {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+section.date .data .sus .detail {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+section.date .data p {
+    color: #ffffff;
+}
+
+
+/* trimite mesaj */
+section.contactare {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.contactare .celula-poza {
+    background-image: url('./imagini/eu\ 4.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 48%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+section.contactare .contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    width: 48%;
+}
+
+section.contactare .contact-left input,
+section.contactare .contact-left textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666666;
+    background-color: #e6e6e6;
+    border-radius: 50px;
+}
+
+section.contactare .contact-left textarea {
+    width: 100%;
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 1.25rem;
+}
+
+section.contactare .contact-left .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    background-color: #d7c086;
+    color: #ffffff;
+    border: 2px solid #d7c086;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+section.contactare .contact-left .button:hover {
+    background-color: #d7c086;
+    border-color: #d7c086;
+    transform: scale(1.05);
+}
+
+section.contactare .contact-left .button:focus {
+    outline: none;
+}
+
+section.contactare .contact-left .button:active {
+    background-color: #d7c086;
+    transform: scale(1);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Găsiți-ne pe Google Maps */
+main section.maps {
+    margin-bottom: 5%;
+}
+
+section.maps h1 {
+    margin-bottom: 10px;
+}
+
+section.maps .harta {
+    width: 100%;
+    height: 500px;
+}
+
+
+@media (max-width: 1100px) {
+    section.date {
+        flex-direction: column;
+    }
+
+    section.date .data {
+        width: 100%;
+    }
+
+    header .hed .text {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    header .hed img {
+        width: 300px;
+        border-radius: 40px;
+    }
+
+
+    section.proiecte-mini .pop {
+        flex-direction: column;
+    }
+
+    section.proiecte-mini .pop .proiect {
+        width: 100%;
+    }
+
+
+    section.proiecte .divcik .pro .info p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    header.noindex .hed .text {
+        width: 100%;
+    }
+
+
+    body.premieri section.proiecte-mini .pop {
+        flex-direction: column;
+    }
+
+    body.premieri section.proiecte-mini .pop .proiect {
+        width: 100%;
+    }
+
+
+    body.premieri section.proiecte .divcik .pro .info p {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+
+}
+
+
+
+@media (max-width: 800px) {
+    section.contactare {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section.contactare .celula-poza {
+        width: 100%;
+    }
+
+    section.contactare .contact-left {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    nav .linkuri {
+        display: none;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    header .hed {
+        flex-direction: column;
+        padding-top: 150px;
+        gap: 20px;
+    }
+
+    header .hed .text {
+        width: 100%;
+        gap: 5px;
+    }
+
+    header .hed img {
+        width: 100%;
+    }
+
+
+    section.despre-mine {
+        margin-top: 200px;
+    }
+
+
+
+    nav #menu-btn i,
+    nav #menu-btn {
+        display: block !important;
+    }
+
+    nav #side-menu {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        background: #d7c086;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: right 0.3s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    nav #side-menu a {
+        margin: 10px 0;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    nav #side-menu.active {
+        right: 0;
+    }
+
+
+
+    section.proiecte .divcik .pro {
+        flex-direction: column;
+    }
+
+    section.proiecte .divcik .pro.x2 {
+        flex-direction: column-reverse;
+    }
+
+    section.proiecte .divcik .pro.x2 {
+        text-align: start;
+    }
+
+    section.proiecte .divcik .pro.x2 .info {
+        align-items: start;
+    }
+
+    section.proiecte .divcik .pro .img {
+        width: 100%;
+    }
+
+    section.proiecte .divcik .pro .info {
+        width: 100%;
+        gap: 5px;
+    }
+
+    section.proiecte .divcik .pro .info h3 {
+        font-size: 20px;
+    }
+
+    section.proiecte .divcik .pro .info p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    section.proiecte .divcik .pro .info span {
+        font-size: 15px;
+    }
+
+
+    section.premii .divik {
+        width: 100%;
+    }
+
+    section.premii .divik .port {
+        width: 100%;
+    }
+
+    section.premii .divik .port .inform h3 {
+        font-size: 20px;
+    }
+
+
+
+    .abilitati .continut .abili .divi {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+
+    section.creare {
+        flex-direction: column-reverse;
+    }
+
+    section.creare .text {
+        width: 100%;
+    }
+
+    section.creare img {
+        width: 100%;
+    }
+
+
+
+
+
+    body.premieri section.proiecte .divcik .pro {
+        flex-direction: column;
+    }
+
+    body.premieri section.proiecte .divcik .pro.x2 {
+        flex-direction: column-reverse;
+    }
+
+    body.premieri section.proiecte .divcik .pro.x2 {
+        text-align: start;
+    }
+
+    body.premieri section.proiecte .divcik .pro.x2 .info {
+        align-items: start;
+    }
+
+    body.premieri section.proiecte .divcik .pro img {
+        width: 100%;
+    }
+
+    body.premieri section.proiecte .divcik .pro .info {
+        width: 100%;
+        gap: 5px;
+    }
+
+    body.premieri section.proiecte .divcik .pro .info h3 {
+        font-size: 20px;
+    }
+
+    body.premieri section.proiecte .divcik .pro .info p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    body.premieri section.proiecte .divcik .pro .info span {
+        font-size: 15px;
+    }
+
+
+
+
+
+
+
+    nav i {
+        display: none !important;
+    }
+}
