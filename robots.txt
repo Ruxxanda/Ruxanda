@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ruxxanda.github.io/Ruxanda/sitemap.xml
