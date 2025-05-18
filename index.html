@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,18 @@
     <meta name="description" content="Portofoliul meu, Ruxanda Cujbă" />
     <meta name="author" content="Ruxanda Cujbă" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Cujbă Ruxanda">
-    <meta property="og:description" content="Portofoliul meu, Ruxanda Cujbă">
-    <meta property="og:image" content="imagini/logo.jpg">
-    <link rel="icon" href="imagini/logo.jpg" type="image/x-icon">
+    <meta name="google" content="notranslate" id="notranslate-meta">
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+
+        if (!userLang.startsWith('ro')) {
+            const meta = document.getElementById('notranslate-meta');
+            if (meta) {
+                meta.remove();
+            }
+        }
+    </script>
+
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>
@@ -37,7 +45,7 @@
         <a href="pagini/contacte.html">
             <i class="fa-regular fa-comment-dots"></i>
         </a>
-        
+
         <button id="menu-btn">
             <i class="fa-solid fa-bars"></i>
         </button>

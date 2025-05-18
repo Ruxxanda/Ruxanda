@@ -12,6 +12,18 @@
     <meta name="description" content="Portofoliul meu, Ruxanda Cujbă" />
     <meta name="author" content="Ruxanda Cujbă" />
     <meta name="robots" content="index,follow" />
+        <script>
+        // Detectăm limba browserului
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // Dacă limba nu e română, scoatem blocarea
+        if (!userLang.startsWith('ro')) {
+            const meta = document.getElementById('notranslate-meta');
+            if (meta) {
+                meta.remove();
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>

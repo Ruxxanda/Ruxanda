@@ -12,6 +12,18 @@
     <meta name="description" content="Portofoliul meu, Ruxanda Cujbă" />
     <meta name="author" content="Ruxanda Cujbă" />
     <meta name="robots" content="index,follow" />
+        <script>
+        // Detectăm limba browserului
+        const userLang = navigator.language || navigator.userLanguage;
+
+        // Dacă limba nu e română, scoatem blocarea
+        if (!userLang.startsWith('ro')) {
+            const meta = document.getElementById('notranslate-meta');
+            if (meta) {
+                meta.remove();
+            }
+        }
+    </script>
 
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/8a1f01fb65.js" crossorigin="anonymous"></script>
@@ -84,16 +96,14 @@
                     <p>Am creat site-ul pentru afacerea de casvacaș „Gustul de la Țară”, unde am promovat produsele
                         tradiționale din Mălcăuți. Acest proiect mi-a adus locul 1 la Tekwil Junior Ambassadors, etapa
                         semifinală.</p>
-                    <span>200 RON</span>
-                </div>
+                    </div>
             </div>
             <div class="pro x2" id="robovis">
                 <div class="info">
                     <h3>RoboVis</h3>
                     <p>Am dezvoltat site-ul echipei de robotică RoboVis, un proiect ce reflectă pasiunea și inovația din
                         domeniul tehnologiei, ajutând echipa să își prezinte realizările.</p>
-                    <span>130 RON</span>
-                </div>
+                    </div>
                 <div class="img x2">
                     <button onclick="window.open('https://ruxxanda.github.io/robovis/')">Vizualizează site-ul</button>
                 </div>
@@ -106,8 +116,7 @@
                     <h3>s. Tătărăuca Veche</h3>
                     <p>Am creat site-ul satului Tătărăuca Veche pentru a promova tradițiile și cultura locală, fiind o
                         platformă de conectare pentru comunitate și vizitatori.</p>
-                    <span>150 RON</span>
-                </div>
+                    </div>
             </div>
         </div>
     </section>

@@ -70,10 +70,10 @@ header.index::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('imagini/imag.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("imagini/imag.jpg");
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -150,6 +150,11 @@ header .hed .text {
     align-items: start;
     justify-content: start;
     gap: 20px;
+}
+
+
+header.index .hed .text {
+    color: #ffffff;
 }
 
 header .hed img {
